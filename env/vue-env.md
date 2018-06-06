@@ -30,3 +30,16 @@ Vue.prototype.common = common
 if (this.common.isOdd(rs.code)) {
 }
 ```
+3、如何在模板中使用变量?<br>
+如:
+```
+<img src="{{avator}}">//这样的写法是错误的
+```
+产生这样写法的原因是:
+```
+<p>{{text}}</p>//这样的方式写多了
+```
+正确的写法是:
+```
+<img :src="avator">
+```
